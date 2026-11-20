@@ -1,0 +1,72 @@
+{
+  "base_model": {
+    "chosen_by": "highest validation ROC AUC; tie -> earlier candidate",
+    "family": "XGBoost",
+    "file": "base_model.joblib",
+    "fitted_on": "train (natural default rate, no undersampling, no prior correction)",
+    "params": {
+      "learning_rate": 0.1,
+      "max_depth": 3,
+      "n_estimators": 60
+    },
+    "pooled_over_states": true,
+    "train_defaults": 1165,
+    "train_rows": 1237819,
+    "validation_roc_auc": 0.7907619267167132
+  },
+  "global_calibration": {
+    "a": -0.4789268486347808,
+    "b": 0.9291134350746173,
+    "chosen_by": "lowest calibration_select (C2) log loss among intercept and platt",
+    "fitted_on": "calibration_fit (C1)",
+    "form": "platt",
+    "formula": "logit p_global = a + b * logit(p_base)"
+  },
+  "logit_clip": 1e-08,
+  "protocol": "E",
+  "question": "Does regional calibration with shrinkage give more accurate probabilities of future default than one global calibration?",
+  "regional_calibration": {
+    "chosen_by": "lowest C2 log loss; tie -> larger lambda",
+    "eligible_rule": "train >= 30, calibration_fit >= 10, calibration_select >= 5 defaults",
+    "eligible_states": [
+      "AZ",
+      "CA",
+      "FL",
+      "IL",
+      "MD",
+      "MI",
+      "MO",
+      "NY",
+      "OH",
+      "PA",
+      "TX"
+    ],
+    "fitted_on": "calibration_fit (C1), ridge penalty lambda * u**2 / 2",
+    "formula": "logit p_regional = a + b * logit(p_base) + shift[state]",
+    "lambda": 1,
+    "lambda_grid": [
+      1,
+      3,
+      10,
+      30,
+      100,
+      300,
+      1000
+    ],
+    "other_regions": "shift 0 (global calibration)",
+    "shifts": {
+      "AZ": 0.338324015667527,
+      "CA": 0.08805129211447241,
+      "FL": 0.20357138232481628,
+      "IL": -0.2523715592007835,
+      "MD": 0.13491476343153982,
+      "MI": 0.18536663564388522,
+      "MO": 0.34401969319187947,
+      "NY": 0.08998546016095166,
+      "OH": 0.1818973446262024,
+      "PA": 0.3061700190994409,
+      "TX": 0.24730376290757614
+    }
+  },
+  "seed": 20261116
+}

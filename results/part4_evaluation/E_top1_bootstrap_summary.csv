@@ -1,0 +1,2 @@
+comparison,budget,reviews_per_method,global_found,regional_found,observed_difference,ci_95_lower,ci_95_upper,places_replaced,bootstrap_repeats,seed
+regional minus global,1% per quarter,15595,78,78,0,-10.0,8.0,2767,2000,20261116

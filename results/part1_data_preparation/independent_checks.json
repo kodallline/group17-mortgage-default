@@ -1,0 +1,9 @@
+{
+  "actual_anchors_checked": 884,
+  "label_mismatches": [],
+  "training_only_regional_feature_errors": 0,
+  "no_infinite_features": {
+    "R": true,
+    "E": true
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "seed": 20261116,
+  "region": "US state and DC; territories excluded",
+  "origination_vintages": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018
+  ],
+  "observation_start": "2013-01",
+  "observation_end": "2018-12",
+  "horizon_months": 3,
+  "target_definition": "First observed numeric delinquency status >=3 (90+ days proxy) or RA (REO acquisition fallback).",
+  "R": {
+    "file": "replication_R.parquet",
+    "target": "target_default",
+    "split": "split_R",
+    "numeric": [
+      "orig_dti_pct",
+      "current_rate_pct",
+      "current_ltv_proxy_pct",
+      "seniority_months",
+      "log_orig_property_value_proxy",
+      "gdp_growth_lag2y_pct",
+      "unemployment_change_lag2y_pp",
+      "hpi_growth_lag3m_pct",
+      "regional_default_rate_lag4q"
+    ],
+    "categorical": [
+      "property_type"
+    ]
+  },
+  "E": {
+    "file": "forecast_E.parquet",
+    "target": "target_default",
+    "split": "split_E",
+    "numeric": [
+      "orig_dti_pct",
+      "current_rate_pct",
+      "current_ltv_proxy_pct",
+      "seniority_months",
+      "log_orig_property_value_proxy",
+      "gdp_growth_lag2y_pct",
+      "unemployment_change_lag2y_pp",
+      "hpi_growth_lag3m_pct",
+      "regional_default_rate_lag4q"
+    ],
+    "categorical": [
+      "property_type"
+    ],
+    "monitoring_existing_loans": true,
+    "exclude_roles": [
+      "purged"
+    ]
+  },
+  "optional_extended_features": {
+    "numeric": [
+      "fico",
+      "orig_ltv_pct",
+      "orig_cltv_pct",
+      "orig_rate_pct",
+      "orig_term_months",
+      "borrowers",
+      "units",
+      "seller_mean_ltv_lag4q",
+      "seller_mean_dti_lag4q",
+      "seller_mean_balance_change_lag4q"
+    ],
+    "categorical": [
+      "occupancy",
+      "purpose",
+      "channel"
+    ]
+  },
+  "do_not_use_as_features": [
+    "loan_id",
+    "state (when fitting separate regional models)",
+    "vintage",
+    "quarter_ord",
+    "month_ord",
+    "report_date",
+    "target_default",
+    "split_R",
+    "split_E",
+    "label_reason",
+    "label_end_month",
+    "label_end_date",
+    "hpi_reference_month",
+    "macro_reference_year",
+    "regional_history_exposure",
+    "seller_history_exposure",
+    "amortization (constant FRM)",
+    "all columns in audit_only.parquet"
+  ],
+  "availability_limit": "Revised historical releases. HPI lagged 3 months; annual GDP/unemployment lagged 2 calendar years. Not a fully vintage-correct real-time backtest.",
+  "preprocessing": "Missing values preserved. Fit imputers, scaling, category encoders and optional tail trimming on each model training split only. No balancing of validation/calibration/test."
+}

@@ -1,0 +1,39 @@
+{
+  "created": "2026-11-19 19:57:57",
+  "seed": 20261116,
+  "versions": {
+    "python": "3.13.18",
+    "numpy": "2.4.6",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.16.3",
+    "xgboost": "3.4.1",
+    "joblib": "1.6.0",
+    "matplotlib": "3.10.0"
+  },
+  "data_sha256_forecast_E": "0d191e081314896d3275aa2b3db24ec3778766e421a3c9f0cef5b5fecacbaf54",
+  "frozen_procedure_sha256": "d9bb959b9d83bd90e2ab88f65a13b261f54467dff3dad662721c26a0c24c6025",
+  "block_counts": {
+    "train": {
+      "rows": 1237819,
+      "defaults": 1165
+    },
+    "validation": {
+      "rows": 407538,
+      "defaults": 384
+    },
+    "calibration_fit": {
+      "rows": 446273,
+      "defaults": 319
+    },
+    "calibration_select": {
+      "rows": 232387,
+      "defaults": 224
+    },
+    "test": {
+      "rows": 1559149,
+      "defaults": 1866
+    }
+  },
+  "runtime_minutes": 4.6
+}

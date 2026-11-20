@@ -1,0 +1,13 @@
+prediction,test_rows,defaults,pooled ROC AUC
+p_natural_logit_with_ltv,1028112,987,0.7456588225734597
+p_natural_logit_without_ltv,1028112,987,0.7464943222584853
+p_natural_gb_with_ltv,1028112,987,0.798693498626849
+p_natural_gb_without_ltv,1028112,987,0.7944333144804818
+p_natural_xgb_with_ltv,1028112,987,0.8107815563626893
+p_natural_xgb_without_ltv,1028112,987,0.7983059476245838
+p_undersampling_logit_with_ltv,1028112,987,0.7459948205828749
+p_undersampling_logit_without_ltv,1028112,987,0.7481328153176396
+p_undersampling_gb_with_ltv,1028112,987,0.7924222372897072
+p_undersampling_gb_without_ltv,1028112,987,0.7851711065810014
+p_undersampling_xgb_with_ltv,1028112,987,0.8091095049813327
+p_undersampling_xgb_without_ltv,1028112,987,0.8032275139673242

@@ -1,0 +1,9 @@
+Group,Training,Features,GB mean AUC gain,GB wins,XGB mean AUC gain,XGB wins
+All 51 regions,natural,with_ltv,0.042238983713698934,36/51,0.04018923769293444,38/51
+All 51 regions,natural,without_ltv,0.01936559054807293,35/51,0.026229587887254904,32/51
+All 51 regions,undersampling,with_ltv,0.036541126636500804,38/51,0.04041393104699909,37/51
+All 51 regions,undersampling,without_ltv,0.01639597273312434,35/51,0.03311903806564222,36/51
+27 regions with local tuning,natural,with_ltv,0.07138793282630916,24/27,0.06801950206660907,24/27
+27 regions with local tuning,natural,without_ltv,0.05508294877882358,22/27,0.047502489950796166,21/27
+27 regions with local tuning,undersampling,with_ltv,0.05808114333490507,23/27,0.06551044438904138,22/27
+27 regions with local tuning,undersampling,without_ltv,0.04488211559647316,23/27,0.048714474332082966,22/27

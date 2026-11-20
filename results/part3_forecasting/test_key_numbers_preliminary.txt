@@ -1,0 +1,10 @@
+all test quarters:
+  log loss  base 0.009233 | global 0.009203 | regional 0.009119  -> regional - global = -0.000084
+  Brier     base 0.00119504 | global 0.00119503 | regional 0.00119490  -> regional - global = -1.26e-07
+  O/E       p_base 2.096 | p_global 2.057 | p_regional 1.899
+  lowest log loss: Regional calibration
+without 2017-09-30 quarter:
+  log loss  base 0.007048 | global 0.007034 | regional 0.007010  -> regional - global = -0.000023
+  Brier     base 0.00090374 | global 0.00090372 | regional 0.00090370  -> regional - global = -1.78e-08
+  O/E       p_base 1.586 | p_global 1.556 | p_regional 1.437
+  lowest log loss: Regional calibration

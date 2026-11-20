@@ -1,0 +1,204 @@
+{
+  "state": "CA",
+  "protocol": "R",
+  "seed": 20261116,
+  "features": [
+    "orig_dti_pct",
+    "current_rate_pct",
+    "current_ltv_proxy_pct",
+    "seniority_months",
+    "log_orig_property_value_proxy",
+    "gdp_growth_lag2y_pct",
+    "unemployment_change_lag2y_pp",
+    "hpi_growth_lag3m_pct",
+    "regional_default_rate_lag4q",
+    "dti_missing",
+    "property_type_CO",
+    "property_type_CP",
+    "property_type_MH",
+    "property_type_PU",
+    "property_type_SF"
+  ],
+  "training_sample": "natural",
+  "selection_metric": "validation ROC AUC",
+  "tie_break": "first candidate in the recorded grid order",
+  "preprocessing": "fitted on train only",
+  "no_ltv_check": "refit with selected parameters",
+  "test": "not used during tuning",
+  "grids": {
+    "Logistic regression": [
+      {
+        "C": 0.01,
+        "l1_ratio": 0.0
+      },
+      {
+        "C": 0.1,
+        "l1_ratio": 0.0
+      },
+      {
+        "C": 1.0,
+        "l1_ratio": 0.0
+      },
+      {
+        "C": 10.0,
+        "l1_ratio": 0.0
+      },
+      {
+        "C": 0.01,
+        "l1_ratio": 0.5
+      },
+      {
+        "C": 0.1,
+        "l1_ratio": 0.5
+      },
+      {
+        "C": 1.0,
+        "l1_ratio": 0.5
+      },
+      {
+        "C": 10.0,
+        "l1_ratio": 0.5
+      },
+      {
+        "C": 0.01,
+        "l1_ratio": 1.0
+      },
+      {
+        "C": 0.1,
+        "l1_ratio": 1.0
+      },
+      {
+        "C": 1.0,
+        "l1_ratio": 1.0
+      },
+      {
+        "C": 10.0,
+        "l1_ratio": 1.0
+      }
+    ],
+    "Gradient boosting": [
+      {
+        "learning_rate": 0.05,
+        "max_depth": 3,
+        "max_iter": 20
+      },
+      {
+        "learning_rate": 0.05,
+        "max_depth": 3,
+        "max_iter": 40
+      },
+      {
+        "learning_rate": 0.05,
+        "max_depth": 3,
+        "max_iter": 60
+      },
+      {
+        "learning_rate": 0.05,
+        "max_depth": 6,
+        "max_iter": 20
+      },
+      {
+        "learning_rate": 0.05,
+        "max_depth": 6,
+        "max_iter": 40
+      },
+      {
+        "learning_rate": 0.05,
+        "max_depth": 6,
+        "max_iter": 60
+      },
+      {
+        "learning_rate": 0.1,
+        "max_depth": 3,
+        "max_iter": 20
+      },
+      {
+        "learning_rate": 0.1,
+        "max_depth": 3,
+        "max_iter": 40
+      },
+      {
+        "learning_rate": 0.1,
+        "max_depth": 3,
+        "max_iter": 60
+      },
+      {
+        "learning_rate": 0.1,
+        "max_depth": 6,
+        "max_iter": 20
+      },
+      {
+        "learning_rate": 0.1,
+        "max_depth": 6,
+        "max_iter": 40
+      },
+      {
+        "learning_rate": 0.1,
+        "max_depth": 6,
+        "max_iter": 60
+      }
+    ],
+    "XGBoost": [
+      {
+        "learning_rate": 0.05,
+        "max_depth": 3,
+        "n_estimators": 20
+      },
+      {
+        "learning_rate": 0.05,
+        "max_depth": 3,
+        "n_estimators": 40
+      },
+      {
+        "learning_rate": 0.05,
+        "max_depth": 3,
+        "n_estimators": 60
+      },
+      {
+        "learning_rate": 0.05,
+        "max_depth": 6,
+        "n_estimators": 20
+      },
+      {
+        "learning_rate": 0.05,
+        "max_depth": 6,
+        "n_estimators": 40
+      },
+      {
+        "learning_rate": 0.05,
+        "max_depth": 6,
+        "n_estimators": 60
+      },
+      {
+        "learning_rate": 0.1,
+        "max_depth": 3,
+        "n_estimators": 20
+      },
+      {
+        "learning_rate": 0.1,
+        "max_depth": 3,
+        "n_estimators": 40
+      },
+      {
+        "learning_rate": 0.1,
+        "max_depth": 3,
+        "n_estimators": 60
+      },
+      {
+        "learning_rate": 0.1,
+        "max_depth": 6,
+        "n_estimators": 20
+      },
+      {
+        "learning_rate": 0.1,
+        "max_depth": 6,
+        "n_estimators": 40
+      },
+      {
+        "learning_rate": 0.1,
+        "max_depth": 6,
+        "n_estimators": 60
+      }
+    ]
+  }
+}

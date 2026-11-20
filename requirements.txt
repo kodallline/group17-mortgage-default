@@ -1,0 +1,14 @@
+# Library versions from our Colab runs (Python 3.12-3.13).
+# Colab already has most of them; the notebook installs what is missing.
+numpy>=2.3,<3
+pandas==2.2.3
+pyarrow>=17,<27
+duckdb==2.0.0
+scipy==1.16.3
+scikit-learn==1.6.1
+xgboost==3.4.1
+joblib==1.6.0
+matplotlib>=3.10,<4
+threadpoolctl
+tqdm
+pytest

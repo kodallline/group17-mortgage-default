@@ -1,0 +1,16 @@
+{
+  "R": {
+    "rows": 5133739,
+    "loans": 414575,
+    "positives": 4831.0
+  },
+  "E": {
+    "rows": 3883166,
+    "loans": 396840,
+    "positives": 3958.0
+  },
+  "E_censored_anchors": 384,
+  "E_purged_anchors": 875761,
+  "elapsed_seconds": 49.0,
+  "checks_passed": 17
+}

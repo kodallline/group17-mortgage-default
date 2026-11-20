@@ -1,0 +1,19 @@
+{
+  "R_unique_loan_quarter": true,
+  "R_feature_period": true,
+  "R_macro_lag": true,
+  "R_hpi_coverage": true,
+  "R_gdp_coverage": true,
+  "E_unique_loan_quarter": true,
+  "E_feature_period": true,
+  "E_macro_lag": true,
+  "E_hpi_coverage": true,
+  "E_gdp_coverage": true,
+  "R_no_cross_split_loan": true,
+  "R_one_positive_per_loan": true,
+  "E_no_existing_default": true,
+  "E_positive_horizon": true,
+  "E_negative_no_default_in_horizon": true,
+  "E_outcomes_before_cutoff": true,
+  "E_no_label_time_overlap": true
+}
